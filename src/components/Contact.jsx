@@ -71,18 +71,23 @@ export default function Contact() {
       return;
     }
 
+    const rawKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+    const accessKey = typeof rawKey === 'string' ? rawKey.replace(/^['"]|['"]$/g, '').trim() : '';
+
+    if (!accessKey || accessKey === 'your_web3forms_access_key_here') {
+      setStatusMessage({
+        type: 'error',
+        text: 'Web3Forms access key is missing. Check your .env file.'
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
-
-      if (!accessKey || accessKey.trim() === '' || accessKey.trim() === 'your_web3forms_access_key_here') {
-        throw new Error('Web3Forms access key is missing. Check your .env file.');
-      }
-
       const formElement = e.currentTarget;
       const formPayload = new FormData(formElement);
-      formPayload.set('access_key', accessKey.trim());
+      formPayload.set('access_key', accessKey);
 
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',

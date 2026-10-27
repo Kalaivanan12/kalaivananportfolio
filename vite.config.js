@@ -31,6 +31,11 @@ function serveResumePlugin() {
 
 // https://vite.dev/config/
 export default defineConfig({
+  root: '.',
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+  },
   plugins: [
     react(),
     tailwindcss(),
