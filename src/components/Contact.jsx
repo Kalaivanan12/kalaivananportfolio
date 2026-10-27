@@ -141,7 +141,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-28 relative border-t border-white/[0.06] bg-[#07090e]">
+    <section id="contact" className="py-16 sm:py-20 lg:py-28 relative border-t border-white/[0.06] bg-[#07090e]">
       {/* Background ambient lighting */}
       <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-sky-600/5 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-purple-600/5 rounded-full blur-[140px] pointer-events-none" />
@@ -149,40 +149,40 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col items-start mb-14">
+        <div className="flex flex-col items-start mb-10 sm:mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-mono font-semibold tracking-wider uppercase mb-3">
             <span>GET IN TOUCH</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
             Let's Build Something Great Together
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-slate-400 max-w-2xl">
+          <p className="mt-2.5 sm:mt-3 text-sm sm:text-base lg:text-lg text-slate-400 max-w-2xl">
             Have a project idea, a web development opportunity, or a collaboration in mind? I'd love to hear from you.
           </p>
           <div className="w-16 h-1 bg-gradient-to-r from-sky-400 to-indigo-500 rounded-full mt-4" />
         </div>
 
         {/* Contact Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           
           {/* Left Column: Direct Contact Details & Social Profiles */}
-          <div className="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-5 space-y-4 sm:space-y-6">
             
             {/* Direct Cards */}
-            <div className="space-y-4">
+            <div className="space-y-3.5 sm:space-y-4">
               
               {/* Email Card */}
-              <div className="p-5 rounded-2xl bg-[#090d16] border border-white/[0.08] hover:border-sky-500/30 transition-all duration-300 shadow-lg shadow-black/20">
-                <div className="flex items-start justify-between">
-                  <div className="flex items-center gap-3.5">
-                    <div className="w-11 h-11 rounded-xl bg-sky-500/15 border border-sky-500/25 flex items-center justify-center text-sky-400">
+              <div className="p-4 sm:p-5 rounded-2xl bg-[#090d16] border border-white/[0.08] hover:border-sky-500/30 transition-all duration-300 shadow-lg shadow-black/20">
+                <div className="flex items-start justify-between gap-2">
+                  <div className="flex items-center gap-3 sm:gap-3.5 min-w-0">
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-sky-500/15 border border-sky-500/25 flex items-center justify-center text-sky-400 shrink-0">
                       <Mail className="w-5 h-5" />
                     </div>
-                    <div>
-                      <div className="text-xs text-slate-400 font-mono">Email Address</div>
+                    <div className="min-w-0">
+                      <div className="text-[11px] sm:text-xs text-slate-400 font-mono">Email Address</div>
                       <a
                         href={`mailto:${personalInfo.email}`}
-                        className="text-sm sm:text-base font-semibold text-white hover:text-sky-300 transition-colors break-all"
+                        className="text-xs sm:text-sm lg:text-base font-semibold text-white hover:text-sky-300 transition-colors break-all"
                       >
                         {personalInfo.email}
                       </a>
@@ -190,7 +190,7 @@ export default function Contact() {
                   </div>
                   <button
                     onClick={handleCopyEmail}
-                    className="p-2 rounded-lg bg-slate-900 border border-white/[0.06] hover:bg-slate-800 text-slate-400 hover:text-white transition-colors text-xs"
+                    className="p-2 rounded-lg bg-slate-900 border border-white/[0.06] hover:bg-slate-800 text-slate-400 hover:text-white transition-colors text-xs shrink-0"
                     title="Copy Email"
                     aria-label="Copy Email"
                   >
@@ -200,16 +200,16 @@ export default function Contact() {
               </div>
 
               {/* Phone Card */}
-              <div className="p-5 rounded-2xl bg-[#090d16] border border-white/[0.08] hover:border-indigo-500/30 transition-all duration-300 shadow-lg shadow-black/20">
-                <div className="flex items-center gap-3.5">
-                  <div className="w-11 h-11 rounded-xl bg-indigo-500/15 border border-indigo-500/25 flex items-center justify-center text-indigo-400">
+              <div className="p-4 sm:p-5 rounded-2xl bg-[#090d16] border border-white/[0.08] hover:border-indigo-500/30 transition-all duration-300 shadow-lg shadow-black/20">
+                <div className="flex items-center gap-3 sm:gap-3.5">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-indigo-500/15 border border-indigo-500/25 flex items-center justify-center text-indigo-400 shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
-                  <div>
-                    <div className="text-xs text-slate-400 font-mono">Phone / WhatsApp</div>
+                  <div className="min-w-0">
+                    <div className="text-[11px] sm:text-xs text-slate-400 font-mono">Phone / WhatsApp</div>
                     <a
                       href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`}
-                      className="text-sm sm:text-base font-semibold text-white hover:text-indigo-300 transition-colors"
+                      className="text-xs sm:text-sm lg:text-base font-semibold text-white hover:text-indigo-300 transition-colors truncate block"
                     >
                       {personalInfo.phone}
                     </a>
@@ -218,14 +218,14 @@ export default function Contact() {
               </div>
 
               {/* Location Card */}
-              <div className="p-5 rounded-2xl bg-[#090d16] border border-white/[0.08] shadow-lg shadow-black/20">
-                <div className="flex items-center gap-3.5">
-                  <div className="w-11 h-11 rounded-xl bg-purple-500/15 border border-purple-500/25 flex items-center justify-center text-purple-400">
+              <div className="p-4 sm:p-5 rounded-2xl bg-[#090d16] border border-white/[0.08] shadow-lg shadow-black/20">
+                <div className="flex items-center gap-3 sm:gap-3.5">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-purple-500/15 border border-purple-500/25 flex items-center justify-center text-purple-400 shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
-                  <div>
-                    <div className="text-xs text-slate-400 font-mono">Current Location</div>
-                    <div className="text-sm sm:text-base font-semibold text-white">
+                  <div className="min-w-0">
+                    <div className="text-[11px] sm:text-xs text-slate-400 font-mono">Current Location</div>
+                    <div className="text-xs sm:text-sm lg:text-base font-semibold text-white truncate">
                       {personalInfo.location}
                     </div>
                   </div>
@@ -235,31 +235,31 @@ export default function Contact() {
             </div>
 
             {/* Social Buttons */}
-            <div className="p-6 rounded-2xl bg-[#090d16] border border-white/[0.08]">
-              <div className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-4">
+            <div className="p-4 sm:p-6 rounded-2xl bg-[#090d16] border border-white/[0.08]">
+              <div className="text-[11px] sm:text-xs font-mono text-slate-400 uppercase tracking-wider mb-3 sm:mb-4">
                 Verified Profiles:
               </div>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
                 <a
                   href={personalInfo.linkedinUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 p-3 rounded-xl bg-slate-900 border border-white/10 hover:border-sky-500/40 text-slate-200 hover:text-sky-300 font-medium text-xs sm:text-sm transition-all"
+                  className="flex items-center justify-center gap-1.5 sm:gap-2 p-2.5 sm:p-3 rounded-xl bg-slate-900 border border-white/10 hover:border-sky-500/40 text-slate-200 hover:text-sky-300 font-medium text-xs sm:text-sm transition-all truncate"
                 >
-                  <LinkedinIcon className="w-4 h-4 text-sky-400" />
-                  <span>LinkedIn</span>
-                  <ExternalLink className="w-3 h-3 text-slate-500" />
+                  <LinkedinIcon className="w-4 h-4 text-sky-400 shrink-0" />
+                  <span className="truncate">LinkedIn</span>
+                  <ExternalLink className="w-3 h-3 text-slate-500 shrink-0 hidden sm:inline" />
                 </a>
 
                 <a
                   href={personalInfo.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 p-3 rounded-xl bg-slate-900 border border-white/10 hover:border-purple-500/40 text-slate-200 hover:text-purple-300 font-medium text-xs sm:text-sm transition-all"
+                  className="flex items-center justify-center gap-1.5 sm:gap-2 p-2.5 sm:p-3 rounded-xl bg-slate-900 border border-white/10 hover:border-purple-500/40 text-slate-200 hover:text-purple-300 font-medium text-xs sm:text-sm transition-all truncate"
                 >
-                  <GithubIcon className="w-4 h-4 text-purple-400" />
-                  <span>GitHub</span>
-                  <ExternalLink className="w-3 h-3 text-slate-500" />
+                  <GithubIcon className="w-4 h-4 text-purple-400 shrink-0" />
+                  <span className="truncate">GitHub</span>
+                  <ExternalLink className="w-3 h-3 text-slate-500 shrink-0 hidden sm:inline" />
                 </a>
               </div>
             </div>
@@ -268,7 +268,7 @@ export default function Contact() {
 
           {/* Right Column: Web3Forms Contact Form */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-8 rounded-3xl bg-[#090d16] border border-white/[0.08] shadow-2xl">
+            <div className="p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl bg-[#090d16] border border-white/[0.08] shadow-2xl">
               
               <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
                 <MessageSquare className="w-5 h-5 text-sky-400" />
@@ -302,7 +302,7 @@ export default function Contact() {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} noValidate className="space-y-4">
+              <form onSubmit={handleSubmit} noValidate className="space-y-3.5 sm:space-y-4">
                 {/* Honeypot Botcheck Field (Hidden from real users) */}
                 <input
                   type="checkbox"
@@ -315,10 +315,10 @@ export default function Contact() {
                   autoComplete="off"
                 />
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   {/* Full Name Field */}
                   <div>
-                    <label htmlFor="name" className="block text-xs font-mono text-slate-300 mb-1.5">
+                    <label htmlFor="name" className="block text-[11px] sm:text-xs font-mono text-slate-300 mb-1 sm:mb-1.5">
                       Full Name <span className="text-sky-400">*</span>
                     </label>
                     <input
@@ -329,20 +329,20 @@ export default function Contact() {
                       onChange={handleChange}
                       disabled={isSubmitting}
                       placeholder="e.g. Kalai vanan"
-                      className={`w-full px-4 py-3 rounded-xl bg-slate-900 border text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all ${
+                      className={`w-full min-w-0 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-slate-900 border text-white text-xs sm:text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all ${
                         errors.name ? 'border-red-500/60 bg-red-950/10' : 'border-white/10 hover:border-white/20'
                       } ${isSubmitting ? 'opacity-60 cursor-not-allowed' : ''}`}
                     />
                     {errors.name && (
                       <p className="text-red-400 text-xs mt-1 flex items-center gap-1">
-                        <AlertCircle className="w-3.5 h-3.5" /> {errors.name}
+                        <AlertCircle className="w-3.5 h-3.5 shrink-0" /> <span>{errors.name}</span>
                       </p>
                     )}
                   </div>
 
                   {/* Email Address Field */}
                   <div>
-                    <label htmlFor="email" className="block text-xs font-mono text-slate-300 mb-1.5">
+                    <label htmlFor="email" className="block text-[11px] sm:text-xs font-mono text-slate-300 mb-1 sm:mb-1.5">
                       Email Address <span className="text-sky-400">*</span>
                     </label>
                     <input
@@ -353,13 +353,13 @@ export default function Contact() {
                       onChange={handleChange}
                       disabled={isSubmitting}
                       placeholder="kalai@company.com"
-                      className={`w-full px-4 py-3 rounded-xl bg-slate-900 border text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all ${
+                      className={`w-full min-w-0 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-slate-900 border text-white text-xs sm:text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all ${
                         errors.email ? 'border-red-500/60 bg-red-950/10' : 'border-white/10 hover:border-white/20'
                       } ${isSubmitting ? 'opacity-60 cursor-not-allowed' : ''}`}
                     />
                     {errors.email && (
                       <p className="text-red-400 text-xs mt-1 flex items-center gap-1">
-                        <AlertCircle className="w-3.5 h-3.5" /> {errors.email}
+                        <AlertCircle className="w-3.5 h-3.5 shrink-0" /> <span>{errors.email}</span>
                       </p>
                     )}
                   </div>
@@ -367,7 +367,7 @@ export default function Contact() {
 
                 {/* Subject Field */}
                 <div>
-                  <label htmlFor="subject" className="block text-xs font-mono text-slate-300 mb-1.5">
+                  <label htmlFor="subject" className="block text-[11px] sm:text-xs font-mono text-slate-300 mb-1 sm:mb-1.5">
                     Subject <span className="text-sky-400">*</span>
                   </label>
                   <input
@@ -378,37 +378,37 @@ export default function Contact() {
                     onChange={handleChange}
                     disabled={isSubmitting}
                     placeholder="Project Inquiry / Job Opportunity / Web Development"
-                    className={`w-full px-4 py-3 rounded-xl bg-slate-900 border text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all ${
+                    className={`w-full min-w-0 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-slate-900 border text-white text-xs sm:text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all ${
                       errors.subject ? 'border-red-500/60 bg-red-950/10' : 'border-white/10 hover:border-white/20'
                     } ${isSubmitting ? 'opacity-60 cursor-not-allowed' : ''}`}
                   />
                   {errors.subject && (
                     <p className="text-red-400 text-xs mt-1 flex items-center gap-1">
-                      <AlertCircle className="w-3.5 h-3.5" /> {errors.subject}
+                      <AlertCircle className="w-3.5 h-3.5 shrink-0" /> <span>{errors.subject}</span>
                     </p>
                   )}
                 </div>
 
                 {/* Message Field */}
                 <div>
-                  <label htmlFor="message" className="block text-xs font-mono text-slate-300 mb-1.5">
+                  <label htmlFor="message" className="block text-[11px] sm:text-xs font-mono text-slate-300 mb-1 sm:mb-1.5">
                     Message <span className="text-sky-400">*</span>
                   </label>
                   <textarea
                     id="message"
                     name="message"
-                    rows="5"
+                    rows="4"
                     value={formData.message}
                     onChange={handleChange}
                     disabled={isSubmitting}
                     placeholder="Tell me about your project, timeline, or open role..."
-                    className={`w-full px-4 py-3 rounded-xl bg-slate-900 border text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all resize-y ${
+                    className={`w-full min-w-0 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-slate-900 border text-white text-xs sm:text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all resize-y ${
                       errors.message ? 'border-red-500/60 bg-red-950/10' : 'border-white/10 hover:border-white/20'
                     } ${isSubmitting ? 'opacity-60 cursor-not-allowed' : ''}`}
                   />
                   {errors.message && (
                     <p className="text-red-400 text-xs mt-1 flex items-center gap-1">
-                      <AlertCircle className="w-3.5 h-3.5" /> {errors.message}
+                      <AlertCircle className="w-3.5 h-3.5 shrink-0" /> <span>{errors.message}</span>
                     </p>
                   )}
                 </div>
@@ -417,7 +417,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-sky-500 via-indigo-600 to-purple-600 hover:from-sky-400 hover:via-indigo-500 hover:to-purple-500 shadow-lg shadow-indigo-600/30 hover:shadow-indigo-500/40 transition-all duration-200 ${
+                  className={`w-full inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-sky-500 via-indigo-600 to-purple-600 hover:from-sky-400 hover:via-indigo-500 hover:to-purple-500 shadow-lg shadow-indigo-600/30 hover:shadow-indigo-500/40 transition-all duration-200 ${
                     isSubmitting ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'
                   }`}
                 >

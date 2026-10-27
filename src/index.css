@@ -1,9 +1,33 @@
 @import "tailwindcss";
 
 @layer base {
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+
   html {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     scroll-behavior: smooth;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
   }
 
   code, pre, .font-mono {
@@ -12,7 +36,8 @@
 
   /* Custom subtle scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
+    height: 6px;
   }
   ::-webkit-scrollbar-track {
     background: #07090e;
@@ -55,6 +80,82 @@
 .glow-card:hover {
   box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.18);
   border-color: rgba(99, 102, 241, 0.35);
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ==========================================================
+   RESPONSIVE MEDIA QUERIES & SCREEN OPTIMIZATIONS
+   ========================================================== */
+
+/* 1. Small Mobile Devices (320px - 360px: iPhone SE, Galaxy Fold) */
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 14px;
+  }
+
+  /* Prevent text clipping & overflow on narrow viewports */
+  h1, h2, h3, h4 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Compact button padding on extra narrow screens */
+  button, a.inline-flex {
+    letter-spacing: -0.01em;
+  }
+}
+
+/* 2. Standard Mobile Devices (361px - 480px) */
+@media screen and (max-width: 480px) {
+  /* Prevent horizontal spill from preformatted/code blocks */
+  pre, code {
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+
+  /* Ensure inputs and textareas do not trigger iOS Safari auto-zoom */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* 3. Phablets and Small Tablets (481px - 767px) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .responsive-card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+/* 4. Standard Tablets (768px - 1023px: iPad portrait/Air) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .tablet-col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+}
+
+/* 5. Laptops & Large Desktops (1024px+) */
+@media screen and (min-width: 1024px) {
+  /* Enforce smooth desktop hover transitions */
+  .desktop-hover-lift:hover {
+    transform: translateY(-2px);
+  }
 }
 
 /* Respect user's motion preference */

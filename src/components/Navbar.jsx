@@ -60,7 +60,7 @@ export default function Navbar() {
           : 'bg-transparent py-4 sm:py-5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between w-full h-10">
           
           {/* Brand Logo - Vertically centered, shrink-0 */}
@@ -75,7 +75,7 @@ export default function Navbar() {
                 KK
               </div>
             </div>
-            <span className="font-extrabold text-base sm:text-lg lg:text-xl tracking-tight text-white group-hover:text-slate-100 transition-colors whitespace-nowrap leading-none">
+            <span className="font-extrabold text-sm sm:text-lg lg:text-xl tracking-tight text-white group-hover:text-slate-100 transition-colors whitespace-nowrap leading-none">
               {personalInfo.brandName}
               <span className="bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
                 {personalInfo.brandSuffix}
@@ -157,7 +157,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu (< 1024px) */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-b border-white/10 bg-[#07090e]/95 backdrop-blur-xl px-4 pt-4 pb-6 shadow-2xl transition-all animate-fadeIn">
+        <div className="lg:hidden border-b border-white/10 bg-[#07090e]/95 backdrop-blur-xl px-4 pt-4 pb-6 shadow-2xl transition-all animate-fadeIn max-h-[calc(100vh-4.5rem)] overflow-y-auto">
           <nav className="flex flex-col gap-1.5 max-w-md mx-auto">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.substring(1);
