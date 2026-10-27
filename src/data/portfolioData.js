@@ -21,9 +21,9 @@ export const personalInfo = {
 export const aboutData = {
   heading: "A Little About Me",
   paragraphs: [
-    "Web Developer & UI/UX Designer: I'm Kalaivanan, a Computer Science professional passionate about building responsive websites, interactive web applications, and user-friendly digital experiences using HTML, CSS, JavaScript, and React.js.",
-    "Website & E-commerce Development: Experienced in working with WordPress, Zoho Commerce, and database integration to create modern websites and effective e-commerce solutions.",
-    "Creative Problem Solver: Knowledgeable in basic digital marketing, with a passion for transforming ideas into functional digital products, exploring emerging technologies, and continuously improving user experiences."
+    "I'm Kalaivanan, a Computer Science professional passionate about building responsive websites, interactive web applications, and user-friendly digital experiences using HTML, CSS, JavaScript, and React.js.",
+    "Experienced in working with WordPress, Zoho Commerce, and database integration to create modern websites and effective e-commerce solutions.",
+    "Knowledgeable in basic digital marketing, with a passion for transforming ideas into functional digital products, exploring emerging technologies, and continuously improving user experiences."
   ],
   pillars: [
     {
