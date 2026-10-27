@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "Kalaivanan K",
   brandName: "KALAIVANAN",
-  brandSuffix: ".DEV",
+  brandSuffix: ".K",
   initials: "KK",
   title: "Web Developer | Frontend Developer",
   statusBadge: "WEB DEVELOPER | OPEN TO OPPORTUNITIES",
@@ -105,7 +105,7 @@ export const skillCategories = [
     iconName: "TrendingUp",
     description: "Foundational digital growth, web discoverability, and audience reach",
     skills: [
-      { name: "SEO Basics", highlight: false },
+      { name: "SEO Basics", highlight: true },
       { name: "Social Media Marketing", highlight: false },
       { name: "Content Marketing", highlight: false }
     ]
