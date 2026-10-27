@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
+import AiSkills from './components/AiSkills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Education from './components/Education';
@@ -23,6 +24,7 @@ export default function App() {
         <Hero />
         <About />
         <Skills />
+        <AiSkills />
         <Experience />
         <Projects />
         <Education />

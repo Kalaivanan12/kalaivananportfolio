@@ -21,9 +21,9 @@ export const personalInfo = {
 export const aboutData = {
   heading: "A Little About Me",
   paragraphs: [
-    "I'm a Computer Science postgraduate with a strong interest in web development and digital product experiences. My technical background includes frontend development, database integration, website development, and e-commerce platforms.",
-    "Through my professional experience, I have developed practical skills in building responsive web interfaces, working with digital systems, and helping users understand technology.",
-    "I enjoy transforming ideas into functional, user-friendly solutions and continuously improving my technical abilities."
+    "Web Developer & UI/UX Designer: I'm Kalaivanan, a Computer Science professional passionate about building responsive websites, interactive web applications, and user-friendly digital experiences using HTML, CSS, JavaScript, and React.js.",
+    "Website & E-commerce Development: Experienced in working with WordPress, Zoho Commerce, and database integration to create modern websites and effective e-commerce solutions.",
+    "Creative Problem Solver: Knowledgeable in basic digital marketing, with a passion for transforming ideas into functional digital products, exploring emerging technologies, and continuously improving user experiences."
   ],
   pillars: [
     {
@@ -108,6 +108,76 @@ export const skillCategories = [
       { name: "SEO Basics", highlight: false },
       { name: "Social Media Marketing", highlight: false },
       { name: "Content Marketing", highlight: false }
+    ]
+  }
+];
+
+export const aiSkillsData = [
+  {
+    id: "ai-tools",
+    category: "AI Tools & Productivity",
+    iconName: "Bot",
+    description: "Everyday AI reasoning models and agentic developer tools accelerating engineering productivity.",
+    accentClass: "border-sky-500/20 hover:border-sky-500/40 shadow-sky-500/5",
+    badgeClass: "bg-sky-500/15 text-sky-300 border-sky-500/30",
+    dotClass: "bg-sky-400",
+    skills: [
+      "ChatGPT",
+      "Google Gemini",
+      "Claude",
+      "Google Antigravity",
+      "Cursor AI"
+    ]
+  },
+  {
+    id: "generative-ai",
+    category: "Generative AI & Prompt Engineering",
+    iconName: "Sparkles",
+    description: "Structured prompt crafting, multimodal synthesis, and generative content workflows.",
+    accentClass: "border-indigo-500/20 hover:border-indigo-500/40 shadow-indigo-500/5",
+    badgeClass: "bg-indigo-500/15 text-indigo-300 border-indigo-500/30",
+    dotClass: "bg-indigo-400",
+    skills: [
+      "Prompt Engineering",
+      "AI Image Generation",
+      "AI Content Creation",
+      "AI-Assisted Website Development",
+      "Creative Content Generation"
+    ]
+  },
+  {
+    id: "digital-marketing",
+    category: "AI-Powered Digital Marketing",
+    iconName: "TrendingUp",
+    description: "Audience targeting, high-converting copywriting, SEO search visibility, and strategic campaign planning.",
+    accentClass: "border-amber-500/20 hover:border-amber-500/40 shadow-amber-500/5",
+    badgeClass: "bg-amber-500/15 text-amber-300 border-amber-500/30",
+    dotClass: "bg-amber-400",
+    skills: [
+      "AI Content Marketing",
+      "AI-Assisted SEO",
+      "AI Social Media Content Creation",
+      "AI Marketing Copywriting",
+      "AI-Powered Keyword Research",
+      "Marketing Content Optimization",
+      "AI-Assisted Campaign Planning"
+    ]
+  },
+  {
+    id: "web-dev-ai",
+    category: "Web Development with AI",
+    iconName: "Code2",
+    description: "Accelerated frontend implementation, React.js workflows, UI prototyping, and code debugging.",
+    accentClass: "border-emerald-500/20 hover:border-emerald-500/40 shadow-emerald-500/5",
+    badgeClass: "bg-emerald-500/15 text-emerald-300 border-emerald-500/30",
+    dotClass: "bg-emerald-400",
+    skills: [
+      "AI-Assisted Coding",
+      "AI-Powered Development Workflows",
+      "React.js Development with AI Tools",
+      "Website Content Generation",
+      "UI/UX Design Assistance",
+      "Debugging and Code Optimization"
     ]
   }
 ];
@@ -255,6 +325,7 @@ export const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
+  { name: "AI & Marketing", href: "#ai-skills" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
   { name: "Education", href: "#education" },

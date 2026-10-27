@@ -8,6 +8,7 @@ A modern, responsive personal portfolio website built with **React.js**, **Vite*
 - **Hero Section**: Badges, dynamic code editor visual (`developerProfile.js`), glowing accents, primary/secondary CTAs, and direct resume download.
 - **About Me**: Narrative overview with 3 core engineering pillars (Web Development, Problem Solving, Continuous Learning).
 - **Technical Toolkit**: Categorized skills (Frontend Development, Programming & Databases, CMS & E-commerce, Tools & Software, Digital Marketing) with clean chips and hover interactions.
+- **AI & Digital Marketing Skills**: Modern workflows including AI Tools & Productivity, Generative AI & Prompt Engineering, AI-Powered Digital Marketing, and Web Development with AI.
 - **Professional Experience**: Modern vertical timeline showcasing roles at Cipher Mutex and Vivid Trans Tech Solutions (TASMAC E2E).
 - **Selected Projects**: Showcase for the *E-Farming System* with interactive CSS dashboard mockup and comprehensive architecture details modal.
 - **Academic Background**: Cards for M.Sc. Computer Science (Sri Krishna Arts and Science College) and B.Sc. Computer Science (National College).
@@ -50,6 +51,7 @@ kalaiportfolio/
 │   ├── assets/              # Static assets
 │   ├── components/
 │   │   ├── About.jsx        # About me & 3 pillars
+│   │   ├── AiSkills.jsx     # AI & Digital Marketing Skills
 │   │   ├── BackToTop.jsx    # Floating smooth scroll button
 │   │   ├── Certifications.jsx # Workshop & assessment credentials
 │   │   ├── Contact.jsx      # Contact form & social cards
