@@ -84,6 +84,7 @@ export const skillCategories = [
     description: "Building content-managed portals and digital storefronts",
     skills: [
       { name: "WordPress", highlight: true },
+      { name: "WooCommerce", highlight: true },
       { name: "Zoho Commerce", highlight: true }
     ]
   },
@@ -219,7 +220,253 @@ export const experienceData = [
   }
 ];
 
+export const motherTerasaColleges = [
+  {
+    id: "engineering",
+    name: "Engineering College",
+    fullName: "Mother Terasa Engineering College",
+    category: "Engineering & Tech",
+    link: "https://www.mtcet.in/",
+    badgeColor: "text-rose-400 bg-rose-500/10 border-rose-500/20",
+    description: "AICTE-approved engineering programs, modern laboratories, and technical education."
+  },
+  {
+    id: "agriculture",
+    name: "College of Agriculture",
+    fullName: "Mother Terasa College of Agriculture",
+    category: "Agriculture, Sports & School",
+    link: "https://www.motherterasaagricollege.com/",
+    badgeColor: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
+    description: "Agricultural research, agronomy, crop science, and practical farming techniques."
+  },
+  {
+    id: "polytechnic",
+    name: "Polytechnic College",
+    fullName: "Mother Terasa Polytechnic College",
+    category: "Engineering & Tech",
+    link: "https://mtpc.org.in/",
+    badgeColor: "text-blue-400 bg-blue-500/10 border-blue-500/20",
+    description: "Hands-on diploma engineering courses focused on practical skill acquisition and industry readiness."
+  },
+  {
+    id: "nursing",
+    name: "College of Nursing",
+    fullName: "Mother Terasa College of Nursing",
+    category: "Medical & Healthcare",
+    link: "https://nursing.motherterasakalvi.com/",
+    badgeColor: "text-pink-400 bg-pink-500/10 border-pink-500/20",
+    description: "B.Sc. and clinical nursing education preparing healthcare professionals for clinical excellence."
+  },
+  {
+    id: "arts-science",
+    name: "College of Arts and Science",
+    fullName: "Mother Terasa College of Arts and Science",
+    category: "Arts, Law & Education",
+    link: "https://www.mtcas.in/",
+    badgeColor: "text-red-400 bg-red-500/10 border-red-500/20",
+    description: "Comprehensive undergraduate and postgraduate programs in science, commerce, and humanities."
+  },
+  {
+    id: "pharmacy",
+    name: "College of Pharmacy",
+    fullName: "Mother Terasa College of Pharmacy",
+    category: "Medical & Healthcare",
+    link: "https://pharmacy.motherterasakalvi.com/",
+    badgeColor: "text-indigo-400 bg-indigo-500/10 border-indigo-500/20",
+    description: "Pharmaceutical sciences, medicinal chemistry, formulation training, and pharmacy practice."
+  },
+  {
+    id: "hotel-management",
+    name: "Hotel Management & Catering",
+    fullName: "Mother Terasa Hotel Management and Catering Technology",
+    category: "Agriculture, Sports & School",
+    link: "https://catering.motherterasakalvi.com/",
+    badgeColor: "text-amber-400 bg-amber-500/10 border-amber-500/20",
+    description: "Hospitality administration, culinary arts, food production, and international hotel management."
+  },
+  {
+    id: "paramedical-science",
+    name: "Institute of Paramedical Science",
+    fullName: "Mother Terasa Institute of Paramedical Science",
+    category: "Medical & Healthcare",
+    link: "https://paramedical.motherterasakalvi.com/",
+    badgeColor: "text-teal-400 bg-teal-500/10 border-teal-500/20",
+    description: "Diagnostic laboratory training, medical radiology, emergency care assistance, and medical imaging."
+  },
+  {
+    id: "physical-education",
+    name: "College of Physical Education",
+    fullName: "Mother Terasa College of Physical Education",
+    category: "Agriculture, Sports & School",
+    link: "https://physical.motherterasakalvi.com",
+    badgeColor: "text-rose-400 bg-rose-500/10 border-rose-500/20",
+    description: "Sports coaching, physical training methodology, kinesiology, and sports fitness management."
+  },
+  {
+    id: "physiotherapy",
+    name: "College of Physiotherapy",
+    fullName: "Mother Terasa College of Physiotherapy",
+    category: "Medical & Healthcare",
+    link: "https://physiotherapy.motherterasakalvi.com",
+    badgeColor: "text-sky-400 bg-sky-500/10 border-sky-500/20",
+    description: "Rehabilitation therapy, musculoskeletal care, sports injury recovery, and mobility science."
+  },
+  {
+    id: "education",
+    name: "College of Education",
+    fullName: "Mother Terasa College of Education",
+    category: "Arts, Law & Education",
+    link: "https://motherteresacoedu.org/",
+    badgeColor: "text-violet-400 bg-violet-500/10 border-violet-500/20",
+    description: "B.Ed. and educational pedagogy training empowering future educators and teaching professionals."
+  },
+  {
+    id: "naturopathy-yoga",
+    name: "Naturopathy & Yoga Medical College",
+    fullName: "Mother Terasa Naturopathy and Yoga Medical College",
+    category: "Medical & Healthcare",
+    link: "https://yoga.motherterasakalvi.com",
+    badgeColor: "text-green-400 bg-green-500/10 border-green-500/20",
+    description: "Holistic natural medicine, yogic therapy, drugless wellness treatments, and lifestyle healthcare."
+  },
+  {
+    id: "school",
+    name: "Matriculation & Higher Secondary",
+    fullName: "Mother Terasa Matriculation and Higher Secondary School",
+    category: "Agriculture, Sports & School",
+    link: "https://school.motherterasakalvi.com",
+    badgeColor: "text-orange-400 bg-orange-500/10 border-orange-500/20",
+    description: "Foundational primary, secondary, and higher secondary education with holistic student growth."
+  },
+  {
+    id: "law",
+    name: "Law College",
+    fullName: "Mother Terasa Law College",
+    category: "Arts, Law & Education",
+    link: "https://law.motherterasakalvi.com",
+    badgeColor: "text-rose-400 bg-rose-500/10 border-rose-500/20",
+    description: "Professional legal education, moot court competitions, jurisprudence, and constitutional law."
+  },
+  {
+    id: "allied-health",
+    name: "Allied Health Science",
+    fullName: "Mother Terasa Institute of Paramedical and Allied Health Science",
+    category: "Medical & Healthcare",
+    link: "https://allied.motherterasakalvi.com",
+    badgeColor: "text-cyan-400 bg-cyan-500/10 border-cyan-500/20",
+    description: "Allied health technology, patient diagnostic support, operation theatre tech, and critical care."
+  }
+];
+
 export const projectsData = [
+  {
+    id: "mother-terasa-institutions",
+    title: "Mother Teresa Group of Institutions",
+    category: "Multi-Website Educational Institution Project",
+    platform: "Web Architecture & Institutional CMS",
+    liveUrl: "https://motherterasakalvi.com/",
+    duration: "Live Institutional Network",
+    year: "2026",
+    statusBadge: "Live Institutional Network",
+    isLive: true,
+    hasCollegeNetwork: true,
+    collegesCount: 15,
+    logoUrl: "/mother-terasa-logo.png",
+    shortDescription:
+      "A flagship multi-website institutional web project encompassing the central institutional portal (motherterasakalvi.com) and 15 individual college websites across engineering, agriculture, healthcare, law, and education.",
+    fullDescription:
+      "Contributed to the multi-website institutional web network for Mother Teresa Group of Institutions. The project spans the main institutional portal and 15 independent college and school websites: Engineering College, College of Agriculture, Polytechnic College, College of Nursing, College of Arts and Science, College of Pharmacy, Hotel Management and Catering Technology, Institute of Paramedical Science, College of Physical Education, College of Physiotherapy, College of Education, Naturopathy and Yoga Medical College, Matriculation & Higher Secondary School, Law College, and Institute of Paramedical & Allied Health Science. Worked on responsive frontend layouts, cross-device consistency, multi-domain navigation structure, academic course discovery, and web asset maintenance.",
+    technologies: [
+      "React.js",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Tailwind CSS",
+      "Responsive Web Design",
+      "Multi-Domain Architecture",
+      "UI/UX Design"
+    ],
+    myContribution:
+      "Worked on the multi-website educational institution project, assisting with responsive frontend interfaces, institutional layouts, unified navigation structures, multi-campus website coordination, and cross-device optimization across the main portal and individual college sites.",
+    keyFeatures: [
+      "Central institutional portal (motherterasakalvi.com)",
+      "15 dedicated college and academy websites",
+      "Unified branding & cross-campus navigation",
+      "Mobile-first responsive design for students and parents",
+      "Academic course catalogs & admission information",
+      "Direct campus portal links & institutional directory"
+    ],
+    architectureHighlights: [
+      { label: "Main Portal", value: "motherterasakalvi.com (Central Gateway)" },
+      { label: "Network Scope", value: "15 Distinct Colleges & Academies" },
+      { label: "Web Architecture", value: "Multi-Domain / Subdomain Interconnected Web Ecosystem" },
+      { label: "Frontend Stack", value: "React.js, HTML5, CSS3, Modern JavaScript" }
+    ]
+  },
+  {
+    id: "pebblezapp",
+    title: "Pebblezapp",
+    category: "Live E-commerce Project",
+    platform: "Zoho Commerce",
+    liveUrl: "https://www.pebblezapp.com/",
+    duration: "Live Commercial Project",
+    shortDescription:
+      "A live e-commerce platform for DIY statue painting and creative art kits, built and customized on Zoho Commerce.",
+    fullDescription:
+      "Worked on a live project for Pebblezapp using Zoho Commerce to showcase DIY statue painting kits and creative art products. Handled storefront layout customization, responsive adjustments, e-commerce catalog presentation, and user-friendly interface styling to deliver a seamless shopping experience for customers.",
+    technologies: ["Zoho Commerce", "HTML5", "CSS3", "JavaScript", "E-commerce Customization"],
+    myContribution:
+      "Worked on the live project using Zoho Commerce, assisting with e-commerce storefront configuration, responsive styling, product layout structure, and interface optimization.",
+    keyFeatures: [
+      "Live production e-commerce storefront",
+      "Zoho Commerce platform configuration",
+      "Responsive layout for mobile and desktop",
+      "Product catalog & collection showcases",
+      "Shopping cart & secure checkout flow",
+      "Custom UI styling and component styling"
+    ],
+    architectureHighlights: [
+      { label: "Platform", value: "Zoho Commerce E-Commerce Engine" },
+      { label: "Project Type", value: "Live E-Commerce Website" },
+      { label: "Frontend", value: "HTML5, Modular CSS3, Responsive JavaScript" },
+      { label: "Live Domain", value: "www.pebblezapp.com" }
+    ],
+    statusBadge: "Live Website",
+    year: "2026",
+    isLive: true
+  },
+  {
+    id: "samudhra-herbs",
+    title: "Samudhra Herbs",
+    category: "Live E-commerce Website",
+    platform: "WordPress & WooCommerce",
+    liveUrl: "https://samudhraherbs.com/",
+    duration: "Live Commercial Project",
+    shortDescription:
+      "A live e-commerce store offering natural and authentic herbal products for haircare, skincare, and healthcare, built on WordPress and WooCommerce.",
+    fullDescription:
+      "Worked on the live e-commerce project for Samudhra Herbs using WordPress and WooCommerce. Supported storefront layout design, herbal product catalog presentation, responsive mobile navigation, and shopping experience optimization for natural wellness products.",
+    technologies: ["WordPress", "WooCommerce", "HTML5", "CSS3", "JavaScript", "Elementor", "PHP"],
+    myContribution:
+      "Worked on the live project using WooCommerce, assisting with e-commerce storefront layout, responsive adjustments, catalog presentation, and product page styling for haircare, skincare, and healthcare products.",
+    keyFeatures: [
+      "Live production WooCommerce store",
+      "WordPress CMS with custom styling",
+      "Product catalog for haircare, skincare & healthcare",
+      "Responsive mobile-first layout",
+      "Shopping cart & checkout workflows",
+      "SEO & performance optimization"
+    ],
+    architectureHighlights: [
+      { label: "Platform", value: "WordPress CMS + WooCommerce" },
+      { label: "Project Type", value: "Live E-Commerce Website" },
+      { label: "Frontend", value: "HTML5, Custom CSS3, Responsive JavaScript" },
+      { label: "Live Domain", value: "samudhraherbs.com" }
+    ],
+    statusBadge: "Live Website",
+    year: "2026",
+    isLive: true
+  },
   {
     id: "e-farming-system",
     title: "E-Farming System",
