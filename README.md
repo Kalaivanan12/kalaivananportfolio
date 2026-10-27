@@ -13,7 +13,7 @@ A modern, responsive personal portfolio website built with **React.js**, **Vite*
 - **Selected Projects**: Flagship showcase for **Mother Teresa Group of Institutions** (Multi-Website Educational Institution Project covering the main portal and 15 college websites with interactive campus directory), live commercial e-commerce stores — **Pebblezapp** (Zoho Commerce) and **Samudhra Herbs** (WordPress & WooCommerce) — and the academic **E-Farming System** (Java, MySQL).
 - **Academic Background**: Cards for M.Sc. Computer Science (Sri Krishna Arts and Science College) and B.Sc. Computer Science (National College).
 - **Research & Publication**: Highlighting *"Achieving Efficient Secure Deduplication With User-Defined Access Control In Cloud"* with abstract points and research domains.
-- **Certifications**: IBM Workshop, Business Analyst Assessment, and Java & Python credential cards.
+- **Certifications & Learning**: Certificate-styled spotlight card for **Full Stack Web Development in MERN Stack** at **Nschool Academy** (Coimbatore, Apr 2025 – Nov 2025) with stack badges (*MongoDB, Express.js, React.js, Node.js, JavaScript, Full Stack Web Development*) alongside verified IBM Workshop, Business Analyst Assessment, and Java/Python credentials.
 - **Contact & Inquiries**: Form with input validation, mailto fallback, and direct channels (Email, Phone, Location, LinkedIn, GitHub).
 - **Floating Controls**: Back-to-top button and accessibility-friendly layout.
 

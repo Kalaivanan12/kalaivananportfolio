@@ -541,6 +541,35 @@ export const publicationData = {
   ]
 };
 
+export const mernCertification = {
+  id: "cert-mern",
+  courseName: "Full Stack Web Development in MERN Stack",
+  institute: "Nschool Academy",
+  location: "Coimbatore, Tamil Nadu, India",
+  duration: "Apr 2025 – Nov 2025",
+  durationFormat: "04/2025 – 11/2025",
+  type: "Full Stack Specialization",
+  statusBadge: "Professional Training Credential",
+  description:
+    "Comprehensive full stack web development program focusing on modern MERN stack architecture. Gained practical hands-on experience developing responsive single-page frontend applications with React.js, designing and building scalable backend REST APIs with Express.js and Node.js, and implementing NoSQL database schema design and queries using MongoDB.",
+  technologies: [
+    "MongoDB",
+    "Express.js",
+    "React.js",
+    "Node.js",
+    "JavaScript",
+    "Full Stack Web Development"
+  ],
+  keyCompetencies: [
+    "MERN Architecture & Full-Stack Data Flow",
+    "React.js Component Architecture & State Management",
+    "Node.js & Express.js RESTful API Engineering",
+    "MongoDB Schema Design & NoSQL Data Persistence",
+    "Modern JavaScript (ES6+), Asynchronous Logic & Promises",
+    "Full Stack Web Application Design & Debugging"
+  ]
+};
+
 export const certificationsData = [
   {
     id: "cert-ibm",
@@ -576,5 +605,6 @@ export const navLinks = [
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
   { name: "Education", href: "#education" },
+  { name: "Certifications", href: "#certifications" },
   { name: "Contact", href: "#contact" }
 ];

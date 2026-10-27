@@ -15,7 +15,7 @@ import BackToTop from './components/BackToTop';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#07090e] text-[#f1f5f9] font-sans selection:bg-indigo-500/30 selection:text-indigo-200 relative">
+    <div className="min-h-screen bg-[#07090e] text-[#f1f5f9] font-sans selection:bg-indigo-500/30 selection:text-indigo-200 relative overflow-x-hidden">
       {/* Global Navbar */}
       <Navbar />
 

@@ -56,25 +56,26 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#07090e]/85 backdrop-blur-md border-b border-white/[0.08] py-3.5 shadow-lg shadow-black/20'
-          : 'bg-transparent py-5'
+          ? 'bg-[#07090e]/90 backdrop-blur-md border-b border-white/[0.08] py-3 shadow-lg shadow-black/25'
+          : 'bg-transparent py-4 sm:py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Brand Logo */}
+        <div className="flex items-center justify-between w-full h-10">
+          
+          {/* Brand Logo - Vertically centered, shrink-0 */}
           <a
             href="#home"
             onClick={(e) => handleNavClick(e, '#home')}
-            className="flex items-center gap-2 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-500 rounded-lg p-1"
+            className="flex items-center gap-2 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-500 rounded-lg p-1 shrink-0"
             aria-label="Kalaivanan K Home"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 via-indigo-600 to-purple-600 p-[1px] shadow-sm shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-200">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-tr from-sky-500 via-indigo-600 to-purple-600 p-[1px] shadow-sm shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-200 shrink-0">
               <div className="w-full h-full bg-[#090d16] rounded-[11px] flex items-center justify-center font-bold text-xs tracking-wider text-sky-400">
                 KK
               </div>
             </div>
-            <span className="font-extrabold text-lg sm:text-xl tracking-tight text-white group-hover:text-slate-100 transition-colors">
+            <span className="font-extrabold text-base sm:text-lg lg:text-xl tracking-tight text-white group-hover:text-slate-100 transition-colors whitespace-nowrap leading-none">
               {personalInfo.brandName}
               <span className="bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
                 {personalInfo.brandSuffix}
@@ -82,8 +83,8 @@ export default function Navbar() {
             </span>
           </a>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-1 lg:gap-1.5 bg-slate-900/60 p-1.5 rounded-full border border-white/[0.07] backdrop-blur-md">
+          {/* Desktop & Compact Tablet Navigation Links */}
+          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 bg-slate-900/70 p-1 rounded-full border border-white/[0.08] backdrop-blur-md shrink-0">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.substring(1);
               return (
@@ -91,67 +92,73 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className={`px-3.5 py-1.5 text-xs lg:text-sm font-medium rounded-full transition-all duration-200 ${
+                  className={`inline-flex items-center justify-center px-2.5 xl:px-3 py-1.5 text-xs xl:text-sm font-medium rounded-full transition-all duration-200 whitespace-nowrap leading-none shrink-0 ${
                     isActive
                       ? 'bg-gradient-to-r from-sky-500/20 via-indigo-500/20 to-purple-500/20 text-white border border-sky-500/30 shadow-sm shadow-sky-500/10'
                       : 'text-slate-400 hover:text-slate-200 hover:bg-white/[0.04]'
                   }`}
                 >
-                  {link.name}
+                  <span className="whitespace-nowrap">{link.name}</span>
                 </a>
               );
             })}
           </nav>
 
-          {/* Right Action Buttons */}
-          <div className="hidden md:flex items-center gap-3">
+          {/* Right Action Buttons (Desktop & Tablet) */}
+          <div className="hidden lg:flex items-center gap-2.5 xl:gap-3 shrink-0">
+            {/* Resume Button */}
             <a
               href={personalInfo.resumeUrl}
               download="Kalaivanan_K_Resume.pdf"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-white/10 hover:border-slate-600 rounded-lg transition-all duration-200"
+              className="inline-flex items-center justify-center gap-1.5 h-9 px-3 text-xs font-medium text-slate-300 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-white/10 hover:border-slate-600 rounded-lg transition-all duration-200 whitespace-nowrap shrink-0"
               title="Download Kalaivanan's Resume"
             >
-              <FileDown className="w-3.5 h-3.5 text-sky-400" />
-              <span>Resume</span>
+              <FileDown className="w-3.5 h-3.5 text-sky-400 shrink-0" />
+              <span className="whitespace-nowrap">Resume</span>
             </a>
 
+            {/* Let's Talk Button */}
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, '#contact')}
-              className="inline-flex items-center gap-1.5 px-4 py-2 text-xs lg:text-sm font-semibold text-white bg-gradient-to-r from-sky-500 via-indigo-600 to-purple-600 hover:from-sky-400 hover:via-indigo-500 hover:to-purple-500 rounded-lg shadow-md shadow-indigo-600/25 hover:shadow-indigo-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+              className="inline-flex items-center justify-center gap-1.5 h-9 px-3.5 xl:px-4 text-xs xl:text-sm font-semibold text-white bg-gradient-to-r from-sky-500 via-indigo-600 to-purple-600 hover:from-sky-400 hover:via-indigo-500 hover:to-purple-500 rounded-lg shadow-md shadow-indigo-600/25 hover:shadow-indigo-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 whitespace-nowrap shrink-0"
             >
-              <span>Let's Talk</span>
-              <ArrowUpRight className="w-4 h-4" />
+              <span className="whitespace-nowrap">Let's Talk</span>
+              <ArrowUpRight className="w-4 h-4 shrink-0" />
             </a>
           </div>
 
-          {/* Mobile Menu Toggle Button */}
-          <div className="flex md:hidden items-center gap-2">
+          {/* Mobile & Small Tablet Controls (< 1024px) */}
+          <div className="flex lg:hidden items-center gap-2 shrink-0">
+            {/* Quick Resume Button */}
             <a
               href={personalInfo.resumeUrl}
               download="Kalaivanan_K_Resume.pdf"
-              className="p-2 text-slate-300 hover:text-white bg-slate-900 border border-white/10 rounded-lg text-xs"
+              className="inline-flex items-center justify-center h-9 px-2.5 text-slate-300 hover:text-white bg-slate-900 border border-white/10 rounded-lg text-xs gap-1.5 whitespace-nowrap shrink-0"
               title="Resume"
               aria-label="Download Resume"
             >
-              <FileDown className="w-4 h-4 text-sky-400" />
+              <FileDown className="w-4 h-4 text-sky-400 shrink-0" />
+              <span className="text-xs font-medium hidden sm:inline whitespace-nowrap">Resume</span>
             </a>
 
+            {/* Hamburger Menu Toggle Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-300 hover:text-white bg-slate-900/90 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="inline-flex items-center justify-center w-9 h-9 text-slate-300 hover:text-white bg-slate-900/90 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 shrink-0"
               aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}
             >
               {mobileMenuOpen ? <X className="w-5 h-5 text-white" /> : <Menu className="w-5 h-5 text-white" />}
             </button>
           </div>
+
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer Menu (< 1024px) */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-white/10 bg-[#07090e]/95 backdrop-blur-xl px-4 pt-4 pb-6 shadow-2xl transition-all animate-fadeIn">
-          <nav className="flex flex-col gap-1.5">
+        <div className="lg:hidden border-b border-white/10 bg-[#07090e]/95 backdrop-blur-xl px-4 pt-4 pb-6 shadow-2xl transition-all animate-fadeIn">
+          <nav className="flex flex-col gap-1.5 max-w-md mx-auto">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.substring(1);
               return (
@@ -159,13 +166,13 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                  className={`flex items-center px-4 py-2.5 rounded-xl text-sm font-medium transition-colors whitespace-nowrap ${
                     isActive
-                      ? 'bg-sky-500/15 text-sky-400 border border-sky-500/30 font-semibold'
+                      ? 'bg-sky-500/15 text-sky-400 border border-sky-500/30 font-semibold shadow-sm shadow-sky-500/10'
                       : 'text-slate-300 hover:text-white hover:bg-white/[0.04]'
                   }`}
                 >
-                  {link.name}
+                  <span className="whitespace-nowrap">{link.name}</span>
                 </a>
               );
             })}
@@ -173,18 +180,18 @@ export default function Navbar() {
               <a
                 href={personalInfo.resumeUrl}
                 download="Kalaivanan_K_Resume.pdf"
-                className="flex items-center justify-center gap-2 w-full py-2.5 text-sm font-medium text-slate-200 bg-slate-900 border border-white/15 rounded-lg"
+                className="inline-flex items-center justify-center gap-2 w-full h-10 text-sm font-medium text-slate-200 bg-slate-900 border border-white/15 rounded-xl hover:bg-slate-800 transition-colors whitespace-nowrap"
               >
-                <FileDown className="w-4 h-4 text-sky-400" />
-                <span>Download Resume (PDF)</span>
+                <FileDown className="w-4 h-4 text-sky-400 shrink-0" />
+                <span className="whitespace-nowrap">Download Resume (PDF)</span>
               </a>
               <a
                 href="#contact"
                 onClick={(e) => handleNavClick(e, '#contact')}
-                className="flex items-center justify-center gap-2 w-full py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-sky-500 to-indigo-600 rounded-lg shadow-md shadow-indigo-600/25"
+                className="inline-flex items-center justify-center gap-2 w-full h-10 text-sm font-semibold text-white bg-gradient-to-r from-sky-500 to-indigo-600 rounded-xl shadow-md shadow-indigo-600/25 hover:from-sky-400 hover:to-indigo-500 transition-all whitespace-nowrap"
               >
-                <span>Let's Talk</span>
-                <ArrowUpRight className="w-4 h-4" />
+                <span className="whitespace-nowrap">Let's Talk</span>
+                <ArrowUpRight className="w-4 h-4 shrink-0" />
               </a>
             </div>
           </nav>
