@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import fs from 'node:fs';
@@ -30,15 +30,34 @@ function serveResumePlugin() {
 }
 
 // https://vite.dev/config/
-export default defineConfig({
-  root: '.',
-  build: {
-    outDir: 'dist',
-    emptyOutDir: true,
-  },
-  plugins: [
-    react(),
-    tailwindcss(),
-    serveResumePlugin(),
-  ],
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '');
+  let web3Key = (
+    env.VITE_WEB3FORMS_ACCESS_KEY ||
+    env.WEB3FORMS_ACCESS_KEY ||
+    process.env.VITE_WEB3FORMS_ACCESS_KEY ||
+    process.env.WEB3FORMS_ACCESS_KEY ||
+    ''
+  ).replace(/^['"]|['"]$/g, '').trim();
+
+  if (web3Key.includes('=')) {
+    web3Key = web3Key.split('=').pop().replace(/^['"]|['"]$/g, '').trim();
+  }
+
+  return {
+    root: '.',
+    build: {
+      outDir: 'dist',
+      emptyOutDir: true,
+    },
+    envPrefix: ['VITE_', 'WEB3FORMS_'],
+    define: {
+      'import.meta.env.VITE_WEB3FORMS_ACCESS_KEY': JSON.stringify(web3Key),
+    },
+    plugins: [
+      react(),
+      tailwindcss(),
+      serveResumePlugin(),
+    ],
+  };
 });

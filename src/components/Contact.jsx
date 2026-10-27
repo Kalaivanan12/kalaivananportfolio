@@ -72,7 +72,10 @@ export default function Contact() {
     }
 
     const rawKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
-    const accessKey = typeof rawKey === 'string' ? rawKey.replace(/^['"]|['"]$/g, '').trim() : '';
+    let accessKey = typeof rawKey === 'string' ? rawKey.replace(/^['"]|['"]$/g, '').trim() : '';
+    if (accessKey.includes('=')) {
+      accessKey = accessKey.split('=').pop().replace(/^['"]|['"]$/g, '').trim();
+    }
 
     if (!accessKey || accessKey === 'your_web3forms_access_key_here') {
       setStatusMessage({
